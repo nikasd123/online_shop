@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">online_shop</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_title">Вход</string>
+    <string name="name">Имя</string>
+    <string name="lastname">Фамилия</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="login_btn">Войти</string>
+    <string name="privacy_policy">Нажимая кнопку “Войти”, Вы принимаете</string>
+    <string name="privacy_link"><font color="#A0A1A3"><a href = "">условия программы лояльности</a></font></string>
 </resources>
