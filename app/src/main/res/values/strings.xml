@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">online_shop</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
