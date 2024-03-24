@@ -11,5 +11,19 @@
     <string name="phone_number">Номер телефона</string>
     <string name="login_btn">Войти</string>
     <string name="privacy_policy">Нажимая кнопку “Войти”, Вы принимаете</string>
-    <string name="privacy_link"><font color="#A0A1A3"><a href = "">условия программы лояльности</a></font></string>
+    <string name="privacy_link"><font color="#A0A1A3"><a href="">условия программы лояльности</a></font></string>
+    <string name="catalog_title">Каталог</string>
+    <string name="filter">Фильтры</string>
+    <string name="price"><strike>749р</strike></string>
+    <string name="discount">-35%</string>
+    <string name="product_description">Лосьон для тела`ESFOLIO` COENZYME Q 10 Увлажняющий 500 мл</string>
+    <string name="product_title">ESFOLIO</string>
+    <string name="rating_count">(51)</string>
+    <string-array name="sort_type">
+        <item>По популярности</item>
+        <item>Новые</item>
+        <item>По цене</item>
+        <item>По рейтингу</item>
+        <item>По скидкам</item>
+    </string-array>
 </resources>

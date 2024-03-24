@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.catalog.CatalogFragment">
+
+    <TextView
+        android:id="@+id/catalog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/catalog_title"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/filters_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catalog_title"
+        app:layout_constraintBottom_toTopOf="@+id/rv_filters"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sort_icon"
+            android:layout_marginEnd="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingEnd="40dp"
+                android:drawableEnd="@drawable/drop_down_icon"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:inputType="none"
+                android:text="Вид сортировки"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textSize="18sp"
+            android:drawablePadding="2dp"
+            app:drawableStartCompat="@drawable/filtres_icon" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_filters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/filters_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filters_linear"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_products"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/product_item"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_filters"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
